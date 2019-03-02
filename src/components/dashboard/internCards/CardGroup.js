@@ -7,13 +7,13 @@ import testData from './../../../test_data';
 class CardGroup extends Component {
 	render() {
 		return (
-            <div style={{'overflowY': 'scroll'}}>
+            <React.Fragment>
                 {testData.internshipObjects.map((applicationData, index) => {
                     return (
                         <InternshipCard key={index} applicationData={applicationData}></InternshipCard>
                     );
                 })}
-            </div>
+            </React.Fragment>
 		);
 	}
 }

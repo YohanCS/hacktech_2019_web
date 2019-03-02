@@ -12,17 +12,17 @@ import styles from './../../css/app.module.css';
 class Main extends Component {
 	render() {
 		return (
-			<div>
+			<React.Fragment>
                 <AppBar className={styles.navbar}>
                     <Toolbar>
-                        <Typography varient='h5'>
+                        <Typography variant='h5' style={{'color': 'white'}}>
                             Impuls
                         </Typography>
                     </Toolbar>
                 </AppBar>
             
                 <Dashboard></Dashboard>
-            </div>
+            </React.Fragment>
 		);
 	}
 }

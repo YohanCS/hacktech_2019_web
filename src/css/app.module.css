@@ -4,12 +4,6 @@
     height: 100%;
 }
 
-.dashboardPage {
-    margin-top: 64px;
-    width: 100%;
-    height: 100%;
-}
-
 .applicationCard {
     margin: 48px !important;
     border-radius: 10%;
@@ -52,4 +46,13 @@
 
 .loginContent {
     max-width: 50%
+}
+
+.dashboardPage {
+    padding-top: 64px;
+}
+
+.cardGroupOverflow {
+    height: 951px;
+    overflow-y: scroll
 }

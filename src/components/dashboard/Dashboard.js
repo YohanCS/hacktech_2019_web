@@ -11,7 +11,7 @@ class Dashboard extends Component {
 		return (
             <div className={styles.dashboardPage}>
                 <Grid container direction="row" justify="flex-start" alignItems="flex-start">
-                    <Grid item xs={4}>
+                    <Grid className={styles.cardGroupOverflow} item xs={4}>
                         <CardGroup/>
                     </Grid>
                     <Grid item xs={8}>
@@ -23,6 +23,7 @@ class Dashboard extends Component {
                     </Grid>
                 </Grid>
             </div>
+            
 		);
 	}
 }
