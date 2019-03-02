@@ -3,17 +3,26 @@ var testData =  {
         {
             name: 'Amazon',
             domain: 'amazon.com',
-            status: 'applied'
+            role: 'SWE Intern',
+            status: 'Accepted'
         },
         {
-            name: 'Google',
-            domain: 'google.com',
-            status: 'interview'
+            name: 'Honey',
+            domain: 'joinhoney.com',
+            role: 'SWE Intern',
+            status: 'Interview'
         },
         {
             name: 'Facebook',
             domain: 'facebook.com',
-            status: 'rejected'
+            role: 'SWE Intern',
+            status: 'Rejected'
+        },
+        {
+            name: 'Spotify',
+            domain: 'spotify.com',
+            role: 'SWE Intern',
+            status: 'Applied'
         }
     ]
 }
