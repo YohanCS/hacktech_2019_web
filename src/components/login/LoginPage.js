@@ -23,25 +23,25 @@ class LoginPage extends Component {
 			width: '12%',
 			height: '25%',
 			borderRadius: '15px',
-
 		};
+
 		return (
 			<div className = "content-wrapper">
-			<div className = "loginbtn">
-			<GoogleLogin 
-                        className="google-login-button"
+				<div className = "loginbtn">
+					<GoogleLogin 
+						className="google-login-button"
 						clientId="177279057869-n5j48p4vn7aucbkvjvcst1qc2j61mgsn.apps.googleusercontent.com"
 						render={renderProps => (
-					      <Button onClick={renderProps.onClick} variant="outlined" color="inherit"  size="large" className={classes.button}>
-							<pre><i class="fab fa-google"></i>  Sign In With Google</pre>
-						  </Button>
-						  )}
-                        buttonText="Sign"
-                        onSuccess={responseGoogle}
-                        onFailure={responseGoogle}
-             />
-		  </div>
-		  </div>
+							<Button onClick={renderProps.onClick} variant="outlined" color="inherit"  size="large" className={classes.button}>
+								<pre><i class="fab fa-google"></i>  Sign In With Google</pre>
+							</Button>
+						)}
+						buttonText="Sign"
+						onSuccess={responseGoogle}
+						onFailure={responseGoogle}
+					/>
+				</div>
+			</div>
 		);
 	}
 }
