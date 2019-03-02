@@ -8,12 +8,14 @@ import Main from './components/dashboard/Main.js'
 class App extends Component {
 	render() {
 		return (
-			<Router>
-				<div>
-					<Route exact path="/" component={LoginPage}/>
-					<Route path="/dashboard" component={Main}/>
-				</div>
-			</Router>
+			<div className="App">
+				<Router>
+					<div>
+						<Route exact path="/" component={LoginPage}/>
+						<Route path="/dashboard" component={Main}/>
+					</div>
+				</Router>
+			</div>
 			
 		);
 	}

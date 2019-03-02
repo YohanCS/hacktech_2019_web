@@ -1,0 +1,5 @@
+.backgroundGradient {
+    background-image: linear-gradient(to right, black, grey);
+    flex: 1;
+    height: 100%
+}

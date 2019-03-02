@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 
+import testData from './../../test_data';
+
+import styles from './../../css/app.module.css';
+
 class Main extends Component {
 	render() {
 		return (
-			<p>
-                This is the main dashboard page
-            </p>
+			<div className={styles.backgroundGradient} >
+                <p>
+                    hello
+                </p>
+            </div>
 		);
 	}
 }
