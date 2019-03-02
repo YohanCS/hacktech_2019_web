@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import { GoogleLogin } from 'react-google-login';
 import Button from '@material-ui/core/Button';
 import classes from 'react';
@@ -11,6 +10,7 @@ class LoginPage extends Component {
 	}
 	  
 	render() {
+
 		const btnStyle = {
 			color: 'white',
 			backgroundColor: 'purple',
