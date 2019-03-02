@@ -36,3 +36,20 @@
 .navbar {
     background-image: linear-gradient(to right, #b483e2, #7b95ed)  !important;
 }
+
+.loginPage {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: 
+    linear-gradient(
+      to right,
+      #b483e2, #7b95ed
+    );
+    color: white;
+}
+
+.loginContent {
+    max-width: 50%
+}

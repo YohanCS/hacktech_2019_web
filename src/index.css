@@ -15,8 +15,6 @@ code {
 
 body{
   height: 100%;
-  color: white;
-
 }
 
 pre{
@@ -25,19 +23,19 @@ pre{
 
 #root{
   height: 100%;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-around; */
 }
 
 html{
   height: 100%;
 }
 
-body {
+/* body {
   background-image: 
     linear-gradient(
       to right,
       #7f72cc, #6f60f8
     );
-}
+} */

@@ -50,6 +50,7 @@ class InternshipCard extends Component {
                             <img 
                                 src={this.getImageSource(applicationData.domain)}
                                 className={styles.domainIcon}
+                                alt="Icon"
                             />
                         </Grid>
                         <Grid item className={styles.domainIcon}>

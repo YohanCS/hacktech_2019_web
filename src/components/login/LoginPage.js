@@ -3,6 +3,8 @@ import { GoogleLogin } from 'react-google-login';
 import Button from '@material-ui/core/Button';
 import classes from 'react';
 
+import styles from './../../css/app.module.css';
+
 class LoginPage extends Component {
 
 	googleResponse(response) {
@@ -21,8 +23,11 @@ class LoginPage extends Component {
 		};
 
 		return (
-			<div className = "content-wrapper">
-				<div className = "loginbtn">
+			<div className={styles.loginPage}>
+				<div className={styles.loginContent}>
+					<p>
+						Here is the login button
+					</p>
 					<GoogleLogin 
 						className="google-login-button"
 						clientId="177279057869-n5j48p4vn7aucbkvjvcst1qc2j61mgsn.apps.googleusercontent.com"
@@ -36,6 +41,7 @@ class LoginPage extends Component {
 						onFailure={this.responseGoogle}
 					/>
 				</div>
+				
 			</div>
 		);
 	}
