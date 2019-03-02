@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import LoginPage from './components/login/LoginPage.js'
 import Main from './components/dashboard/Main.js'
@@ -16,7 +16,6 @@ class App extends Component {
 					</div>
 				</Router>
 			</div>
-			
 		);
 	}
 }
