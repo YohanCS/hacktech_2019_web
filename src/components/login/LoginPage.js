@@ -1,21 +1,16 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+
 import { GoogleLogin } from 'react-google-login';
 import Button from '@material-ui/core/Button';
-import { createMuiTheme } from '@material-ui/core/styles';
-import grey from '@material-ui/core/colors/grey';
 import classes from 'react';
 
-
-
-const responseGoogle = (response) => {
-    console.log(response);
-}
-
 class LoginPage extends Component {
+
+	googleResponse(response) {
+		console.log(response)
+	}
 	  
 	render() {
-
 		const btnStyle = {
 			color: 'white',
 			backgroundColor: 'purple',
@@ -37,8 +32,8 @@ class LoginPage extends Component {
 							</Button>
 						)}
 						buttonText="Sign"
-						onSuccess={responseGoogle}
-						onFailure={responseGoogle}
+						onSuccess={this.responseGoogle}
+						onFailure={this.responseGoogle}
 					/>
 				</div>
 			</div>
