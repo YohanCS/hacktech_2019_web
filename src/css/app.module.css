@@ -11,5 +11,10 @@
 }
 
 .applicationCard {
-    margin: 24px !important;
+    margin: 48px !important;
+    border-radius: 10%;
+}
+
+.companyIcon {
+    width: 151
 }
