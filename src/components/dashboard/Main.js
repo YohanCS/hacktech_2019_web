@@ -4,15 +4,20 @@ import Dashboard from './Dashboard';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 
+
+import styles from './../../css/app.module.css';
 
 class Main extends Component {
 	render() {
 		return (
 			<div>
-                <AppBar>
+                <AppBar className={styles.navbar}>
                     <Toolbar>
-                        Impuls
+                        <Typography varient='h5'>
+                            Impuls
+                        </Typography>
                     </Toolbar>
                 </AppBar>
             
