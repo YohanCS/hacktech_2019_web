@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 
-import EmailCard from './EmailCard';
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
-
-import Grid from '@material-ui/core/Grid';
 
 import styles from './../../../css/app.module.css';
 

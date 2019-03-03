@@ -29,6 +29,7 @@ class DetailsInfo extends Component {
                 <img
                     className={styles.detailsLogo}
                     src={applicationData.logo}
+                    alt='Company Icon'
                 ></img>
                 <Typography variant='h3' style={{'marginTop': '15px'}}>
                     {applicationData.name}
