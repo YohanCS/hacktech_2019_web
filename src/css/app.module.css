@@ -100,3 +100,8 @@
 .emailBuffer {
     margin: 6px
 }
+
+.timeline {
+    height: 350px; 
+    overflow-y: scroll;
+}
