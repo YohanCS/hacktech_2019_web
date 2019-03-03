@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import CardGroup from './internCards/CardGroup';
 import DetailsView from './dialog/DetailsView';
 import Blank from './dialog/Blank'; 
+import Profile from './dialog/Profile';
 
 import Grid from '@material-ui/core/Grid';
 
@@ -23,12 +24,14 @@ class Dashboard extends Component {
     }
 
     renderView() {
-        if (this.state.view === 'details' && this.state.selected !== null) {
+        if (this.props.renderProfile === true) {
+            return <Profile applicationData={this.props.applicationData}></Profile>
+        } else if (this.state.view === 'details' && this.state.selected !== null) {
             return <DetailsView selectedCard={this.state.selected}></DetailsView>
         } else if (this.state.view === 'none') {
             return <Blank></Blank>
         } else if (this.state.view === 'profile') {
-            return <div></div>
+            return <Profile applicationData={this.props.applicationData}></Profile>
         } else {
             return <div></div>
         }
@@ -38,6 +41,7 @@ class Dashboard extends Component {
         this.setState({
             view: 'none'
         }, () => {
+            this.props.deRender()
             this.setState({
                 view: 'details',
                 selected: selectedCard

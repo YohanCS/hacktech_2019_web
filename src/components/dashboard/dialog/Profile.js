@@ -11,7 +11,7 @@ class Profile extends Component {
 		return (
             <Paper className={styles.detailsViewPanel}>
 				<DetailNav title="Profile View"></DetailNav>
-                <ProfileData></ProfileData>
+                <ProfileData applicationData={this.props.applicationData}></ProfileData>
             </Paper>
 		);
 	}
