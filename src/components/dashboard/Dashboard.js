@@ -14,23 +14,30 @@ class Dashboard extends Component {
         super(props)
 
         this.state = {
-            view: 'details',
-            selected: '',
+            view: 'none',
+            selected: null,
         }
+
+        this.selectCard = this.selectCard.bind(this);
     }
 
     renderView() {
-        if (this.state.view === 'details') {
-            return <DetailsView></DetailsView>
+        if (this.state.view === 'details' && this.state.selected !== null) {
+            return <DetailsView selectedCard={this.state.selected}></DetailsView>
         } else if (this.state.view === 'none') {
             return <div></div>
         } else if (this.state.view === 'profile') {
             return <div></div>
+        } else {
+            return <div></div>
         }
     }
 
-    selectCard(card) {
-        console.log(card)
+    selectCard(selectedCard) {
+        this.setState({
+            view: 'details',
+            selected: selectedCard
+        });
     }
 
 	render() {

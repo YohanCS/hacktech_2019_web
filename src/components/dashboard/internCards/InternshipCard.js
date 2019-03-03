@@ -5,8 +5,6 @@ import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
-import Paper from '@material-ui/core/Paper';
-
 import styles from './../../../css/app.module.css';
 
 
@@ -24,9 +22,16 @@ class InternshipCard extends Component {
         super(props)
 
         this.state = {
-            applicationData: props.applicationData
+            applicationData: props.applicationData,
+            raised: false
         }
+
+        this.onMouseOver = this.onMouseOver.bind(this);
+        this.onMouseout = this.onMouseOut.bind(this);
     }
+
+    onMouseOver = () => this.setState({ raised: true });
+    onMouseOut = () => this.setState({ raised: false });
 
     getImageSource(domain) {
         return '//logo.clearbit.com/' + domain
@@ -42,8 +47,13 @@ class InternshipCard extends Component {
         const {applicationData} = this.state
 
 		return (
-            <Paper className={styles.applicationCard} onClick={() => this.props.selectCard(this.state.applicationData)}>
-                <Card>
+                <Card 
+                    raised={this.state.raised}
+                    className={styles.applicationCard} 
+                    onClick={() => this.props.selectCard(this.state.applicationData)}
+                    onMouseOver={this.onMouseOver}
+                    onMouseOut={this.onMouseOut}
+                    >
                     <Grid container>
                         <Grid item className={styles.domainIcon}>
                             <img 
@@ -85,7 +95,6 @@ class InternshipCard extends Component {
                         </Grid>
                     </Grid>
                 </Card>
-            </Paper>
 		);
 	}
 }
