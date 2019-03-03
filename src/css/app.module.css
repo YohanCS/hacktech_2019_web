@@ -38,7 +38,7 @@
     justify-content: center;
     background-image: 
     linear-gradient(
-      to right,
+      to left,
       #b483e2, #7b95ed
     );
     color: white;
@@ -104,4 +104,20 @@
 .timeline {
     height: 350px; 
     overflow-y: scroll;
+}
+
+.logo {
+    width: 300px;
+    height: 300px;
+}
+
+.logoTitle {
+    color: white !important;
+    font-size: 80px !important;
+    margin-bottom: -10px !important;
+}
+
+.logoDescription {
+    color: white !important;
+    margin-bottom: 40px !important;
 }
