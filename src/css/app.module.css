@@ -128,14 +128,25 @@
     margin-right: 17px;
 }
 
-/* .blankPage {
+.blankPage {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 755px;
+    height: 800px;
 }
 
 .blankContent {
     max-width: 50%;
-} */
+}
+
+.blankLogo {
+    height: 300px;
+    width: 300px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+}
+
+.imFaded {
+    animation:fadeIn 1s linear;
+}

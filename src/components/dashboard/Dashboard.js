@@ -26,7 +26,6 @@ class Dashboard extends Component {
         if (this.state.view === 'details' && this.state.selected !== null) {
             return <DetailsView selectedCard={this.state.selected}></DetailsView>
         } else if (this.state.view === 'none') {
-            return <div></div>
             return <Blank></Blank>
         } else if (this.state.view === 'profile') {
             return <div></div>
