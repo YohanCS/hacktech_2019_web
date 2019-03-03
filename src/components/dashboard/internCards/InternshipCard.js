@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import EmailIcon from './EmailIcon'
+
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
@@ -36,7 +38,7 @@ class InternshipCard extends Component {
 
 	render() {
         const {applicationData} = this.state
-        if (applicationData.from.logo !== '' && applicationData.from.name !== undefined) {
+        if (applicationData.logo !== '' && applicationData.name !== undefined) {
             return (
                 <Card 
                     raised={this.state.raised}
@@ -48,7 +50,7 @@ class InternshipCard extends Component {
                     <Grid container>
                         <Grid item className={styles.domainIcon}>
                             <img 
-                                src={applicationData.from.logo}
+                                src={applicationData.logo}
                                 className={styles.domainIcon}
                                 alt="Icon"
                             />
@@ -58,7 +60,7 @@ class InternshipCard extends Component {
                                 <Grid container>
                                     <Grid item>
                                         <Typography variant="h6">
-                                            {applicationData.from.name}
+                                            {applicationData.name}
                                         </Typography>  
                                     </Grid>
                                     {/* <Grid item>
@@ -75,12 +77,13 @@ class InternshipCard extends Component {
                                     </Grid>
                                     <Grid item>
                                         <Typography gutterBottom className={styles.status} style={this.getStatusColor(applicationData.status)}>
-                                            {applicationData.status}
+                                            {/* {applicationData.status} */}
                                         </Typography>  
                                     </Grid>
                                 </Grid>
                             </CardContent>
                         </Grid>
+                        <EmailIcon emailCount={applicationData.emails.length}></EmailIcon>
                     </Grid>
                 </Card>
 		    );

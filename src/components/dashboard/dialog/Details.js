@@ -27,15 +27,15 @@ class Details extends Component {
             <div className={styles.detailsInformation}>
                 <img
                     className={styles.detailsLogo}
-                    src={applicationData.from.logo}
+                    src={applicationData.logo}
                 ></img>
                 <Typography variant='h3' style={{'marginTop': '15px'}}>
-                    {applicationData.from.name}
+                    {applicationData.name}
                 </Typography>
                 <Typography variant='h5' style={{'marginTop': '6px'}}>
                     Status: &nbsp;
                     <span style={this.getStatusColor(applicationData.status)}>
-                        {applicationData.status}
+                        {/* {applicationData.status} */}
                     </span>
                 </Typography>
                 <div className={styles.detailsBorder}></div>
