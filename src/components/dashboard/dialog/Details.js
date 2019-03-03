@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import Typography from '@material-ui/core/Typography';
+import DetailsInfo from './DetailsInfo';
+import EmailTimeline from './EmailTimeline';
 
 import styles from './../../../css/app.module.css';
-import STATUS_COLORS from './../../../status_colors';
 
 class Details extends Component {
     constructor(props) {
@@ -12,34 +12,15 @@ class Details extends Component {
         this.state = {
             applicationData: props.selectedCard
         }
-        console.log(props.selectedCard);
-    }
-
-    getStatusColor(status) {
-        return {
-            'color': STATUS_COLORS[status]
-        }
     }
 
 	render() {
         const {applicationData} = this.state;
 		return (
-            <div className={styles.detailsInformation}>
-                <img
-                    className={styles.detailsLogo}
-                    src={applicationData.logo}
-                ></img>
-                <Typography variant='h3' style={{'marginTop': '15px'}}>
-                    {applicationData.name}
-                </Typography>
-                <Typography variant='h5' style={{'marginTop': '6px'}}>
-                    Status: &nbsp;
-                    <span style={this.getStatusColor(applicationData.status)}>
-                        {/* {applicationData.status} */}
-                    </span>
-                </Typography>
+            <div>
+                <DetailsInfo applicationData={applicationData}></DetailsInfo>
                 <div className={styles.detailsBorder}></div>
-                
+                <EmailTimeline emails={applicationData.emails}></EmailTimeline>
             </div>
 		);
 	}

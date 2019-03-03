@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-import EmailIcon from './EmailIcon'
+import EmailIcon from './EmailIcon';
+import CompanyLogo from './CompanyLogo';
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -49,13 +50,9 @@ class InternshipCard extends Component {
                     >
                     <Grid container>
                         <Grid item className={styles.domainIcon}>
-                            <img 
-                                src={applicationData.logo}
-                                className={styles.domainIcon}
-                                alt="Icon"
-                            />
+                            <CompanyLogo source={applicationData.logo}/>
                         </Grid>
-                        <Grid item className={styles.domainIcon}>
+                        <Grid item xs={12} sm className={styles.domainIcon}>
                             <CardContent className={styles.applicationContent}>
                                 <Grid container>
                                     <Grid item>
@@ -63,11 +60,6 @@ class InternshipCard extends Component {
                                             {applicationData.name}
                                         </Typography>  
                                     </Grid>
-                                    {/* <Grid item>
-                                        <Typography  className={styles.role}>
-                                            {applicationData.role}
-                                        </Typography>  
-                                    </Grid> */}
                                 </Grid>
                                 <Grid container>
                                     <Grid item>
