@@ -34,6 +34,7 @@ class Dashboard extends Component {
     }
 
     selectCard(selectedCard) {
+        console.log(selectedCard)
         this.setState({
             view: 'details',
             selected: selectedCard

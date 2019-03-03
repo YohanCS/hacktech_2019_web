@@ -45,8 +45,8 @@ class InternshipCard extends Component {
 
 	render() {
         const {applicationData} = this.state
-
-		return (
+        if (applicationData.from.logo !== '' && applicationData.from.name !== undefined) {
+            return (
                 <Card 
                     raised={this.state.raised}
                     className={styles.applicationCard} 
@@ -57,7 +57,7 @@ class InternshipCard extends Component {
                     <Grid container>
                         <Grid item className={styles.domainIcon}>
                             <img 
-                                src={this.getImageSource(applicationData.domain)}
+                                src={applicationData.from.logo}
                                 className={styles.domainIcon}
                                 alt="Icon"
                             />
@@ -67,14 +67,14 @@ class InternshipCard extends Component {
                                 <Grid container>
                                     <Grid item>
                                         <Typography variant="h6">
-                                            {applicationData.name}
+                                            {applicationData.from.name}
                                         </Typography>  
                                     </Grid>
-                                    <Grid item>
+                                    {/* <Grid item>
                                         <Typography  className={styles.role}>
                                             {applicationData.role}
                                         </Typography>  
-                                    </Grid>
+                                    </Grid> */}
                                 </Grid>
                                 <Grid container>
                                     <Grid item>
@@ -95,7 +95,10 @@ class InternshipCard extends Component {
                         </Grid>
                     </Grid>
                 </Card>
-		);
+		    );
+        } else {
+            return <React.Fragment></React.Fragment>
+        }
 	}
 }
 
