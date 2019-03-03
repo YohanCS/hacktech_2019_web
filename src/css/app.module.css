@@ -69,3 +69,22 @@
     );
     color: white;
 }
+
+.detailsInformation {
+    margin: 24px;
+}
+
+.detailsLogo {
+    border-radius: 50%;
+    padding:10px;
+    border:1px solid lightgray;
+    background-color: white;
+}
+
+.detailsBorder {
+    height: 1px;
+    margin: 13px;
+    margin-top: 20px;
+    width: 97%;
+    background-color: lightgray;
+}

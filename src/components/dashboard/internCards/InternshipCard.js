@@ -6,16 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 import styles from './../../../css/app.module.css';
-
-
-const STATUS_COLORS = {
-    'Accepted': '#5ac46b',
-    'Rejected': '#f26659',
-    'Coding Challenge': '#59a6ff',
-    'Applied': '#fcad58',
-    'Interview': '#bf80f2'
-}
-
+import STATUS_COLORS from './../../../status_colors';
 
 class InternshipCard extends Component {
     constructor(props) {
@@ -89,9 +80,6 @@ class InternshipCard extends Component {
                                     </Grid>
                                 </Grid>
                             </CardContent>
-                        </Grid>
-                        <Grid>
-
                         </Grid>
                     </Grid>
                 </Card>
