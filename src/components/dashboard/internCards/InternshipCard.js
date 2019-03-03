@@ -23,7 +23,6 @@ class InternshipCard extends Component {
     constructor(props) {
         super(props)
 
-        console.log(props.applicationData);
         this.state = {
             applicationData: props.applicationData
         }
@@ -43,7 +42,7 @@ class InternshipCard extends Component {
         const {applicationData} = this.state
 
 		return (
-            <Paper className={styles.applicationCard}>
+            <Paper className={styles.applicationCard} onClick={() => this.props.selectCard(this.state.applicationData)}>
                 <Card>
                     <Grid container>
                         <Grid item className={styles.domainIcon}>

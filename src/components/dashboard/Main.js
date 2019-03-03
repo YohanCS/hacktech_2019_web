@@ -13,14 +13,13 @@ class Main extends Component {
 	render() {
 		return (
 			<React.Fragment>
-                <AppBar className={styles.navbar}>
+                <AppBar position="static" className={styles.navbar}>
                     <Toolbar>
                         <Typography variant='h5' style={{'color': 'white'}}>
-                            Impuls
+                            Impulse
                         </Typography>
                     </Toolbar>
                 </AppBar>
-            
                 <Dashboard></Dashboard>
             </React.Fragment>
 		);

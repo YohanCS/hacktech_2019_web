@@ -49,10 +49,23 @@
 }
 
 .dashboardPage {
-    padding-top: 64px;
+    /* padding-top: 64px; */
 }
 
 .cardGroupOverflow {
-    height: 951px;
+    height: 851px;
     overflow-y: scroll
+}
+
+.detailsViewPanel {
+    margin: 48px;
+    height: 755px;
+}
+
+.detailsViewToolbar {
+    background-image: linear-gradient(
+      to right,
+    #7b95ed, #b483e2
+    );
+    color: white;
 }

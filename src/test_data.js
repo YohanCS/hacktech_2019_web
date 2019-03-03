@@ -19,14 +19,8 @@ var testData =  {
             status: 'Rejected'
         },
         {
-            name: 'Spotify',
-            domain: 'spotify.com',
-            role: 'SWE Intern',
-            status: 'Applied'
-        },
-        {
-            name: 'Honey',
-            domain: 'joinhoney.com',
+            name: 'SendGrid',
+            domain: 'sendgrid.com',
             role: 'SWE Intern',
             status: 'Interview'
         },
