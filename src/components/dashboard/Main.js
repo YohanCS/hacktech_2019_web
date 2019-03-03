@@ -8,18 +8,24 @@ import Typography from '@material-ui/core/Typography';
 
 import styles from './../../css/app.module.css';
 
+import logo from './../../assets/tielogo.png';
+
 class Main extends Component {
 	render() {
 		return (
 			<React.Fragment>
                 <AppBar position="static" className={styles.navbar}>
                     <Toolbar>
+                        <img
+                            src={logo}
+                            className={styles.logoTopLeft}>
+                        </img>
                         <Typography variant='h5' style={{'color': 'white'}}>
                             Impulse
                         </Typography>
                     </Toolbar>
                 </AppBar>
-                <Dashboard></Dashboard>
+                <Dashboard applicationData={this.props.applicationData}></Dashboard>
             </React.Fragment>
 		);
 	}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import CardGroup from './internCards/CardGroup';
 import DetailsView from './dialog/DetailsView';
+import Blank from './dialog/Blank'; 
 
 import Grid from '@material-ui/core/Grid';
 
@@ -26,6 +27,7 @@ class Dashboard extends Component {
             return <DetailsView selectedCard={this.state.selected}></DetailsView>
         } else if (this.state.view === 'none') {
             return <div></div>
+            return <Blank></Blank>
         } else if (this.state.view === 'profile') {
             return <div></div>
         } else {
@@ -49,7 +51,7 @@ class Dashboard extends Component {
             <div className={styles.dashboardPage}>
                 <Grid container direction="row" justify="flex-start" alignItems="flex-start">
                     <Grid className={styles.cardGroupOverflow} item xs={4}>
-                        <CardGroup selectCard={this.selectCard}/>
+                        <CardGroup applicationData={this.props.applicationData} selectCard={this.selectCard}/>
                     </Grid>
                     <Grid item xs={8}>
                         {this.renderView()}

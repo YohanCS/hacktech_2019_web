@@ -39,11 +39,7 @@ class EmailTimeline extends Component {
                                 <h3>From: {email.from.email}</h3>
                                 <h4>{email.from.domain}</h4>
                                 <p>
-                                    Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla
-                                    exercitation. Veniam velit adipisicing anim excepteur nostrud magna
-                                    nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure
-                                    reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem
-                                    est.
+                                    {email.snippet}
                                 </p>
                             </TimelineItem>
                         );

@@ -24,7 +24,7 @@ class App extends Component {
 
 	renderView(loggedIn) {
 		if (loggedIn) {
-			return <Main></Main>
+			return <Main applicationData={this.state.applicationData}></Main>
 		} else {
 			return <LoginPage googleLogin={this.googleLogin} googleError={this.googleError}></LoginPage>
 		}
@@ -41,18 +41,30 @@ class App extends Component {
 
 	getApplicationData(accessToken) {
 		let self = this;
-		axios.get(API_GET_EMAILS, {
-			params: {
-				accessToken: accessToken
-			}
-		}).then((response) => {
+
+		axios.get('https://api.fedor.me/v1/test_data')
+		.then((response) => {
 			console.log(response);
 			self.setState({
+				applicationData: response.data,
 				loggedIn: true
 			});
 		}).catch((error) => {
 			console.log(error)
 		});
+
+		// axios.get(API_GET_EMAILS, {
+		// 	params: {
+		// 		accessToken: accessToken
+		// 	}
+		// }).then((response) => {
+		// 	console.log(response);
+		// 	self.setState({
+		// 		loggedIn: true
+		// 	});
+		// }).catch((error) => {
+		// 	console.log(error)
+		// });
 	}
 
 	render() {

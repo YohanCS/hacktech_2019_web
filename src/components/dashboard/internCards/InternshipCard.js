@@ -68,8 +68,8 @@ class InternshipCard extends Component {
                                         </Typography>  
                                     </Grid>
                                     <Grid item>
-                                        <Typography gutterBottom className={styles.status} style={this.getStatusColor(applicationData.status)}>
-                                            {/* {applicationData.status} */}
+                                        <Typography gutterBottom className={styles.status} style={this.getStatusColor(applicationData.recent_status)}>
+                                            {applicationData.recent_status}
                                         </Typography>  
                                     </Grid>
                                 </Grid>

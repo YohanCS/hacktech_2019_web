@@ -36,8 +36,8 @@ class DetailsInfo extends Component {
                 </Typography>
                 <Typography variant='h5' style={{'marginTop': '6px'}}>
                     Status: &nbsp;
-                    <span style={this.getStatusColor(applicationData.status)}>
-                        {/* {applicationData.status} */}
+                    <span style={this.getStatusColor(applicationData.recent_status)}>
+                        {applicationData.recent_status}
                     </span>
                 </Typography>                
             </div>

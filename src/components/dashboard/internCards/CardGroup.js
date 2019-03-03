@@ -2,15 +2,13 @@ import React, { Component } from 'react';
 
 import InternshipCard from './InternshipCard'
 
-import testData3 from './../../../test_data_3';
-
 class CardGroup extends Component {
 	render() {
 		return (
             <React.Fragment>
-                {testData3.map((applicationData, index) => {
+                {this.props.applicationData.map((application, index) => {
                     return (
-                        <InternshipCard key={index} applicationData={applicationData} selectCard={this.props.selectCard}></InternshipCard>
+                        <InternshipCard key={index} applicationData={application} selectCard={this.props.selectCard}></InternshipCard>
                     );
                 })}
             </React.Fragment>
