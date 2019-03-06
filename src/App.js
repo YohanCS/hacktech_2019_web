@@ -5,6 +5,8 @@ import './App.css';
 import LoginPage from './components/login/LoginPage.js';
 import Main from './components/dashboard/Main.js';
 
+import test_data from './pitch_data/impulse_result.json';
+
 import API_GET_EMAILS from './impuls_api';
 import {CLIENT_ID, CLIENT_SECRET} from './unsafe_auth';
 
@@ -20,6 +22,7 @@ class App extends Component {
 		this.googleLogin = this.googleLogin.bind(this)
 		this.googleError = this.googleError.bind(this)
 		this.getApplicationData = this.getApplicationData.bind(this);
+		this.getTestData = this.getTestData.bind(this);
 	}
 
 	renderView(loggedIn) {
@@ -30,13 +33,21 @@ class App extends Component {
 		}
 	}
 
-	googleLogin(response) {
-		console.log(response);
-		this.getApplicationData(response.accessToken);
+	googleLogin() {
+		this.getTestData();
+
+		// this.getApplicationData(response.accessToken);
 	}
 
 	googleError(response) {
 		console.log(response);
+	}
+
+	getTestData() {
+		this.setState({
+			applicationData: test_data,
+			loggedIn: true
+		});
 	}
 
 	getApplicationData(accessToken) {
